@@ -1,0 +1,14 @@
+---
+
+# task file for hadenlabs.apache
+
+- name: Ensure apt cache is up to date
+  apt:
+    update_cache: yes
+
+
+- name: Install apache dependencies
+  apt: name={{ item }} state=present update_cache=yes
+  with_items: apache_packages
+  tags:
+    - apache
