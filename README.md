@@ -30,6 +30,21 @@ Here is the list of all variables and their default values:
 ```yaml
     ---
     # defaults file for hadenlabs.apache
+    apache_domain: ''
+
+    apache_venv_port: 80
+    apache_venv_server_admin: ''
+    apache_venv_server_name: ''
+    apache_venv_server_alias: ''
+
+    apache_venv_documentroot: ''
+
+    apache_env:
+      APPLICATION_ENV: local
+
+    apache_modules:
+      - rewrite
+
 ```
 
 
