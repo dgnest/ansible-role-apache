@@ -1,0 +1,13 @@
+---
+# vars file for hadenlabs.apache (Ubuntu specific)
+
+_apache_package_dependencies:
+  - build-essential
+
+
+_apache_dependencies:
+  - name: build-essential
+    version: 1.0.0
+
+_apache_packages:
+  - apache2
