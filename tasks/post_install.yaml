@@ -1,16 +1,14 @@
 ---
 # task for hadenlabs.apache
 
-- name: enabled modules
-  apache2_module: name="{{item}}" state=present
-  with_items: apache_modules is defined
-  when: apache_modules
+- name: a2ensite "{{ apache_domain }}"
+  command: a2ensite "{{ apache_domain }}".vhost.conf
   notify:
   - restart apache2
 
-- name: a2ensite "{{ apache_domain }}"
-  command: a2ensite "{{ apache_domain }}"
-  args:
-    creates: "{{ _apache_domain_conf }}"
+- name: enabled modules
+  apache2_module: name="{{item}}" state=present
+  with_items: apache_modules
+  when: apache_modules is defined
   notify:
   - restart apache2
