@@ -2,15 +2,15 @@
 # task for hadenlabs.apache
 
 - name: enabled modules
-  apache2_module: name={{item}} state=present
+  apache2_module: name="{{item}}" state=present
   with_items: apache_modules is defined
   when: apache_modules
   notify:
   - restart apache2
 
-- name: a2ensite {{ apache_domain }}
-  command: a2ensite {{ apache_domain }}
+- name: a2ensite "{{ apache_domain }}"
+  command: a2ensite "{{ apache_domain }}"
   args:
-    creates: {{ _apache_domain_conf }}
+    creates: "{{ _apache_domain_conf }}"
   notify:
   - restart apache2

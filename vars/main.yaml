@@ -11,9 +11,9 @@ _apache:
 #     # group: "root"
 #     owner: "{{ user }}"
 
-_apache_domain_conf: "{{ _apache.path.sites-available }}/{{apache_domain}}".vhost.conf
+_apache_domain_conf: "{{ _apache.path.sites-available }}/{{apache_domain}}.vhost.conf"
 
 _apache:
   templates:
     - src: "vhost.conf.j2"
-      dest: {{ _apache_domain_conf }}
+      dest: "{{ _apache_domain_conf }}"
