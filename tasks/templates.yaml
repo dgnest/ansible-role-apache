@@ -3,9 +3,7 @@
 
 - name: copy templates
   template:
-  
     src: "{{ item.src }}"
     dest: "{{ item.dest }}"
-  
   with_items: _apache.templates
   when: _apache.templates is defined
