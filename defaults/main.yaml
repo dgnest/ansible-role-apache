@@ -4,11 +4,11 @@
 apache_domain: ''
 
 apache_venv_port: 80
-apache_venv_server_admin: ''
-apache_venv_server_name: ''
-apache_venv_server_alias: ''
+apache_venv_server_admin: 'admin@hadenlabs.com'
+apache_venv_server_name: 'www.hadenlabs.vm'
+apache_venv_server_alias: "{{ apache_venv_server_name }}"
 
-apache_venv_documentroot: ''
+apache_venv_documentroot: '/var/www/'
 
 apache_env:
   APPLICATION_ENV: local
