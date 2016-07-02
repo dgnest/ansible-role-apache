@@ -1,9 +1,13 @@
 ---
 # vars file for hadenlabs.apache
 
+_apache_path:
+  sites_available: "/etc/apache2/sites-available"
+
 _apache:
-  path:
-    sites-available: /etc/apache2/sites-available
+  templates:
+    - src: "vhost.conf.j2"
+      dest: "{{ _apache_domain_conf }}"
 
 # _apache_create_files:
 #   - path: "{{ _path_dir }}"
@@ -11,9 +15,4 @@ _apache:
 #     # group: "root"
 #     owner: "{{ user }}"
 
-_apache_domain_conf: "{{ _apache.path.sites-available }}/{{apache_domain}}".vhost.conf
-
-_apache:
-  templates:
-    - src: "vhost.conf.j2"
-      dest: {{ _apache_domain_conf }}
+_apache_domain_conf: "{{ _apache_path.sites_available }}/{{ apache_domain }}.vhost.conf"
