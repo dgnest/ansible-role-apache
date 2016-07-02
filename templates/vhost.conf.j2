@@ -1,11 +1,11 @@
 <VirtualHost *:{{ apache_venv_port }}>
-ServerAdmin "{{ apache_venv_server_admin }}"
-ServerName "{{ apache_venv_server_name }}"
-ServerAlias "{{ apache_venv_server_alias }}"
+ServerAdmin {{ apache_venv_server_admin }}
+ServerName {{ apache_venv_server_name }}
+ServerAlias {{ apache_venv_server_alias }}
 
-DocumentRoot "{{ apache_venv_documentroot }}"
+DocumentRoot {{ apache_venv_documentroot }}
 
-<Directory "{{ apache_venv_documentroot }}">
+<Directory {{ apache_venv_documentroot }}>
   {% if apache_env %}
   {% for key,value in apache_env.items() %}
     SetEnv {{key}} {{value}}
@@ -30,13 +30,13 @@ ScriptAlias /cgi-bin/ /usr/lib/cgi-bin/
 	Allow from all
 </Directory>
 
-ErrorLog ${APACHE_LOG_DIR}/"{{apache_domain}}"-error.log
+ErrorLog ${APACHE_LOG_DIR}/{{apache_domain}}-error.log
 
 # Possible values include: debug, info, notice, warn, error, crit,
 # alert, emerg.
 LogLevel warn
 
-CustomLog ${APACHE_LOG_DIR}/"{{apache_domain}}"-access.log combined
+CustomLog ${APACHE_LOG_DIR}/{{apache_domain}}-access.log combined
 
 Alias /doc/ "/usr/share/doc/"
 <Directory "/usr/share/doc/">
