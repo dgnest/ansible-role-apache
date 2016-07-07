@@ -15,4 +15,4 @@ _apache:
 #     # group: "root"
 #     owner: "{{ user }}"
 
-_apache_domain_conf: "{{ _apache_path.sites_available }}/{{ apache_domain }}.vhost.conf"
+_apache_domain_conf: "{{ _apache_path.sites_available }}/{{ apache_domain }}.conf"
