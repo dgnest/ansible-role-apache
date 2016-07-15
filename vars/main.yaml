@@ -6,7 +6,7 @@ _apache_path:
 
 _apache:
   templates:
-    - src: "vhost.conf.j2"
+    - src: "vhost.conf.2.4.j2"
       dest: "{{ _apache_domain_conf }}"
 
 # _apache_create_files:
