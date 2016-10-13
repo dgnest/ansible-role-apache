@@ -1,5 +1,5 @@
 ---
-# vars file for hadenlabs.apache (Ubuntu specific)
+# vars file for dgnest.apache (Ubuntu specific)
 
 _apache_package_dependencies:
   - build-essential

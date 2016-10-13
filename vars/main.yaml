@@ -1,5 +1,5 @@
 ---
-# vars file for hadenlabs.apache
+# vars file for dgnest.apache
 
 _apache_path:
   sites_available: "/etc/apache2/sites-available"
