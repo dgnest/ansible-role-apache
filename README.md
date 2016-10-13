@@ -79,15 +79,17 @@ Please see [CONTRIBUTING](CONTRIBUTING.md) for details.
 
 ## Credits
 
-- [author][link-author]
+Made with :heart: ️:coffee:️ and :pizza: by [dgnest][link-company].
+
 - [All Contributors][link-contributors]
 
 
 ---
 
-Made with ♥️ and ☕️ by dgnest and our community.
 
 <!-- Other -->
 
 [link-author]: https://github.com/luismayta
+[link-contributors]: AUTHORS
 [link-contributors]: contributors
+[link-company]: https://github.com/dgnest
