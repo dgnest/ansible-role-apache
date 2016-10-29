@@ -1,5 +1,5 @@
 ---
-# task for hadenlabs.apache
+# task for dgnest.apache
 
 - include: install.d/CentOS.yaml
   when: ansible_distribution == "CentOS"
