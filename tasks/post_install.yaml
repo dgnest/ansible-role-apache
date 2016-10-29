@@ -1,5 +1,5 @@
 ---
-# task for hadenlabs.apache
+# task for dgnest.apache
 
 - name: a2ensite "{{ apache_domain }}"
   command: a2ensite "{{ apache_domain }}".vhost.conf

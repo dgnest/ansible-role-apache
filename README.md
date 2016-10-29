@@ -1,9 +1,8 @@
 # Ansible Role Apache
 
 <span class="badges" align="center">
-[![Build Status](https://travis-ci.org/hadenlabs/ansible-role-apache.svg)](https://travis-ci.org/hadenlabs/ansible-role-apache)
-[![Stories in Ready](https://badge.waffle.io/hadenlabs/ansible-role-apache.svg?label=ready&title=Ready)](http://waffle.io/hadenlabs/ansible-role-apache)
-[![GitHub issues](https://img.shields.io/github/issues/hadenlabs/ansible-role-apache.svg)](https://github.com/hadenlabs/ansible-role-apache/issues)
+[![Build Status](https://travis-ci.org/dgnest/ansible-role-apache.svg)](https://travis-ci.org/dgnest/ansible-role-apache)
+[![GitHub issues](https://img.shields.io/github/issues/dgnest/ansible-role-apache.svg)](https://github.com/dgnest/ansible-role-apache/issues)
 [![GitHub license](https://img.shields.io/github/license/mashape/apistatus.svg?style=flat-square)](LICENSE)
 </span>
 
@@ -13,7 +12,7 @@ This Ansible Role infuses antigravity, you are warned
 Install it with the following command:
 
 ```bash
-$ ansible-galaxy install hadenlabs.apache
+$ ansible-galaxy install dgnest.apache
 
 ```
 Requirements
@@ -29,7 +28,7 @@ Here is the list of all variables and their default values:
 
 ```yaml
     ---
-    # defaults file for hadenlabs.apache
+    # defaults file for dgnest.apache
     apache_domain: ''
 
     apache_venv_port: 80
@@ -61,7 +60,7 @@ To run this playbook with default settings, create a basic playbook like this:
 ```yaml
     - hosts: servers
       roles:
-        - hadenlabs.apache
+        - dgnest.apache
 ```
 
 
@@ -79,15 +78,15 @@ Please see [CONTRIBUTING](CONTRIBUTING.md) for details.
 
 ## Credits
 
-- [author][link-author]
+Made with :heart: ️:coffee:️ and :pizza: by [dgnest][link-company].
+
 - [All Contributors][link-contributors]
 
-
 ---
-
-Made with ♥️ and ☕️ by hadenlabs and our community.
 
 <!-- Other -->
 
 [link-author]: https://github.com/luismayta
+[link-contributors]: AUTHORS
 [link-contributors]: contributors
+[link-company]: https://github.com/dgnest
